@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANITS Web Development Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>ANITS Developer Bootcamp</h1>
+    <p>Showcasing HTML5 Graphics and CSS3 Web Styling</p>
+</header>
+<nav>
+    <a href="#welcome">Home</a>
+    <a href="#canvas-section">Canvas Demo</a>
+    <a href="#topics">Learning Topics</a>
+</nav>
+<section id="welcome">
+    <h2>Welcome to the Showcase</h2>
+    <p style="text-align: center;">This page demonstrates how to combine HTML5, CSS3, and JavaScript.</p>
+</section>
+<section id="canvas-section">
+    <h2>HTML5 Canvas Demonstration</h2>
+    <p style="text-align: center;">Here is a very basic Student ID Badge drawn using a rectangle, circle, text, and a line.</p>
+    <canvas id="myCanvas" width="400" height="200"></canvas>
+</section>
+<section id="topics">
+    <h2>Web Development Topics</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>HTML5</h3>
+            <p>We use semantic tags like header and section to make our code readable.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <h3>CSS3</h3>
+            <p>CSS brings our page to life with colors, layout, and spacing.</p>
+            <button>View Examples</button>
+        </div>
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>The canvas tag uses JavaScript to draw graphics directly in the browser.</p>
+            <button>Try It Out</button>
+        </div>
+    </div>
+</section>
+<footer>
+    <p>Designed by Patnana Harsha Vardhan</p>
+    <p>B.Tech Computer Science | ANITS</p>
+</footer>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "#f4f5f7";
+    ctx.fillRect(20, 20, 350, 150);
+
+    ctx.beginPath();
+    ctx.arc(80, 95, 40, 0, 2 * Math.PI);
+    ctx.fillStyle = "#1a528e";
+    ctx.fill();
+
+    ctx.fillStyle = "#222222";
+    ctx.font = "20px Arial";
+    ctx.fillText("Patnana Harsha Vardhan", 135, 90);
+
+    ctx.beginPath();
+    ctx.moveTo(135, 100);
+    ctx.lineTo(350, 100);
+    ctx.strokeStyle = "#cccccc";
+    ctx.stroke();
+</script>
+</body>
+</html>
